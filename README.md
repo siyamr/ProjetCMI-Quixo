@@ -1,2 +1,2 @@
-# ProjetCMI wesh le 100
+# ProjetCMI
 Projet CMI
