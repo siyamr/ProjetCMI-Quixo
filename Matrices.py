@@ -16,8 +16,8 @@ neutre = 0   #case blanche
 
 
 # Matrices
-cell = [[0 for i in range(taille)] for j in range(taille)]    #mémorise les carrés qui représentent les cellules
-etat = [[neutre for i in range(taille)] for j in range(taille)] #mémorise les statuts des cellules (neutre ou vivant)
+cell = [[0 for i in range(taille)] for j in range(taille)]    #mémorise les carrés qui représentent cases
+etat = [[neutre for i in range(taille)] for j in range(taille)] #mémorise les statuts des cases
 
 # Lancement du programme
 fenetre = Tk()
