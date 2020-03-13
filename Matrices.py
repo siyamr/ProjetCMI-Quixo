@@ -2,7 +2,7 @@ from tkinter import *
 from random import randrange
 
 
-# Données initiales (pas de cellules vivante + création du damier avec matrice cell)
+# Données initiales (création du plan de jeu grâce à la matrice)
 def init():
     for y in range(taille):
         for x in range(taille):
