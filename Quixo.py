@@ -15,7 +15,7 @@ def dessiner():
                 if etat[x][y]==rond:
                     canvas.create_oval(x*cote, y*cote, (x+1)*cote, (y+1)*cote,outline = 'black')
                 if etat[x][y]==croix:
-                    cavans.create
+                    canvas.create
 
 def rol1():
     etat[coordx][coordy]=rond
