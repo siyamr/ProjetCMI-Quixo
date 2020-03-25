@@ -1,24 +1,47 @@
-# Recevoir les cases disponibles pour jouer
-global coordonne
-global possibilite
-possibilite =  [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
-
-def coord_input():
-    coordonne = 0
-    print("Entrez les coordonnés de la case que vous voulez jouer")
-    x = input()
-    y = input()
-    while x < 0 or x > 4:
-        print("Coordonné en x invalide")
-        x = input()
-    while y < 0 or y > 4:
-        print("Coordonné en y invalide")
-        y = input()
-    coordonne = x + y  # transforme les coordonnés en un couple pour vérifier sa disponibilité
-    return coordonne
+import Quixo.py
+global case[x] = 1 #case jouée [0-15]
+global mvt = "" #Endroit ou la case est déplacée G,D,B,H
 
 
+def depgauche():
 
-def mvt():
-    coord_input()
-    for i in range(len(possibilite)):
+def depdroite():
+    global tmp = case[x]
+    case[x] = 3
+    for i in range(1, 5):
+        if case[i] == 3:
+            break
+        if x + i > 4:
+            case[0]= case[x]
+        else :
+            case[x + i] = tmp
+
+
+def depbas():
+
+def dephaut():
+
+
+
+def direction():
+    if mvt == "G":
+        depgauche
+    elif mvt == "D":
+        depdroite
+    elif mvt == "B":
+        depbas
+    else:
+        dephaut
+
+
+print("Ou voullez-vous déplacer la case ? [G,D,B,H]")
+str mvt = input()
+mvt = mvt.upper()
+
+
+while (mvt != 'G' or mvt != 'D' or mvt != 'B' or mvt != 'H'):
+    print("Entré invalide, veuillez choisir l'une des propositions ci-contre [G]auche, [D]roite, [B]as, [H]aut")
+    mvt = input()
+    mvt = mvt.upper()
+
+direction
