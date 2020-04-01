@@ -9,7 +9,7 @@ global mvt = ""     #Endroit ou la case est déplacée G,D,B,H
 
 def verifInput():
     while (mvt != 'G' or mvt != 'D' or mvt != 'B' or mvt != 'H'):
-        print("Entré invalide, veuillez choisir l'une des propositions ci-contre [G]auche, [D]roite, [B]as, [H]aut")
+        print("Entrée invalide, veuillez choisir l'une des propositions ci-contre [G]auche, [D]roite, [B]as, [H]aut")
         mvt = input()
         mvt = mvt.upper()
 
@@ -92,8 +92,8 @@ def direction():
 
 #-----------Programme-----------#
 
-print("Ou voullez-vous déplacer la case ? [G,D,B,H]")
-str mvt = input()
+print("Ou voulez-vous déplacer la case ? [G,D,B,H]")
+mvt = str(input())
 mvt = mvt.upper()
 
 verifInput()
