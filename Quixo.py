@@ -61,7 +61,7 @@ def test():
             if (coord2x==0 and coord2y==0) or (coord2x==4 and coord2y==4):
                 check2=True
     if coordx==1 or coordx==2 or coordx==3:
-        if (coord2x==0 and coord2y==0) or (coord2x==4 and coord2y==0) or (coord2x==coordx and coord2y=4):
+        if (coord2x==0 and coord2y==0) or (coord2x==4 and coord2y==0) or (coord2x==coordx and coord2y==4):
             check=True
     if coordx==4:
         if coordy==0:
@@ -75,7 +75,7 @@ def test():
                 check2=True
 
 
-def mvt():
+# def mvt():
     
 
 taille=5
