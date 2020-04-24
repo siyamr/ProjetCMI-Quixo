@@ -7,6 +7,7 @@ beige = (255, 224, 163)
 white = (255, 255, 255)
 grey = (192, 192, 192)
 darker = (170, 170, 170)
+black = (0, 0, 0)
 
 #Variables
 click = False
@@ -21,7 +22,7 @@ pygame.display.flip()
 #Global Font for All
 myfont = pygame.font.SysFont('Courier', 60, bold=True)
 button_font = pygame.font.SysFont('Courier', 20)
-
+font_credits = pygame.font.SysFont('Comic Sans MS', 20, bold=True)
 
 #Fonction écrire texte
 def draw_text(text, font, color, surface, x, y):
@@ -105,12 +106,44 @@ def game():
         screen.fill(beige)
 
         draw_text('Jeu', myfont, white, screen, 340, 75)
+        mx, my = pygame.mouse.get_pos()
+
+        button_back = pygame.Rect(20, 20, 100, 25)
+
+        button_one_v_one = pygame.Rect(250, 250, 300, 100)
+        button_one_v_ia = pygame.Rect(250, 400, 300, 100)
+
+        if button_back.collidepoint((mx, my)):
+            pygame.draw.rect(screen, grey, button_back)
+            if click:
+                main_menu()
+        else:
+            pygame.draw.rect(screen, darker, button_back)
+
+        if button_one_v_one.collidepoint((mx, my)):
+            pygame.draw.rect(screen, grey, button_one_v_one)
+            if click:
+                #vers 1v1 normalement
+                main_menu()
+        else:
+            pygame.draw.rect(screen, darker, button_one_v_one)
+
+        if button_one_v_ia.collidepoint((mx, my)):
+            pygame.draw.rect(screen, grey, button_one_v_ia)
+            if click:
+                #vers 1via
+                main_menu()
+        else:
+            pygame.draw.rect(screen, darker, button_one_v_ia)
+
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_ESCAPE:
                     running = False
+
 
         pygame.display.update()
         mainClock.tick(60)
@@ -121,6 +154,18 @@ def rules():
         screen.fill(beige)
 
         draw_text('Règles', myfont, white, screen, 290, 75)
+        mx, my = pygame.mouse.get_pos()
+
+        button_back = pygame.Rect(20, 20, 100, 25)
+
+        if button_back.collidepoint((mx, my)):
+            pygame.draw.rect(screen, grey, button_back)
+            if click:
+                main_menu()
+        else:
+            pygame.draw.rect(screen, darker, button_back)
+
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
@@ -137,6 +182,22 @@ def credits():
         screen.fill(beige)
 
         draw_text('Crédits', myfont, white, screen, 280, 75)
+        draw_text('Jeu conçu par :', font_credits, black, screen, 270, 175)
+        draw_text('Sofian E. | Clara L. | Adam S. | Siyam R.', font_credits, black, screen, 270, 200)
+        draw_text('Musique composée par :', font_credits, black, screen, 270, 300)
+        draw_text('Adam Said', font_credits, black, screen, 270, 325)
+
+        mx, my = pygame.mouse.get_pos()
+
+        button_back = pygame.Rect(20, 20, 100, 25)
+
+        if button_back.collidepoint((mx, my)):
+            pygame.draw.rect(screen, grey, button_back)
+            if click:
+                main_menu()
+        else:
+            pygame.draw.rect(screen, darker, button_back)
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
