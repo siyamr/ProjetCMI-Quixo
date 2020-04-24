@@ -31,26 +31,7 @@ def dessiner():
             joueur = 1
         print("c'est le tour de joeur ",joueur)
                     
-def gagner():
-    cptj1=0
-    cptj2=0
-    while cptj1!=5 or cptj2!=5:
-        for y in range(taille):
-            cptj1=0
-            cptj2=0
-            for x in range(taille):
-                if etat[x][y]==rond:
-                    cptj1=cptj1+1
-                if etat[x][y]==croix:
-                    cptj2=cptj2+1
-        for x in range(taille):
-            cptj1=0
-            cptj2=0
-            for y in range(taille):
-                if etat[x][y]==rond:
-                    cptj1=cptj1+1
-                if etat[x][y]==croix:
-                    cptj2=cptj2+1   
+
 
 def clic(event):
     print("compt=",compt)
@@ -169,7 +150,6 @@ def mvt():
     dessiner()
     global compt
     compt=0
-    gagner()
     
     
 
