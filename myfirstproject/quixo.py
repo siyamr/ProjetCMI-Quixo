@@ -167,7 +167,7 @@ def gagner():
         for x in range(taille):
             if etat[x][y]==rond:
                 cptj1=cptj1+1
-            if etat[x][y]==croix:
+            if etat[x][y]==rond2:
                 cptj2=cptj2+1
                 if cptj1 == 5 or cptj2 == 5:
                     popup()
@@ -177,7 +177,7 @@ def gagner():
         for y in range(taille):
             if etat[x][y]==rond:
                 cptj1=cptj1+1
-            if etat[x][y]==croix:
+            if etat[x][y]==rond2:
                 cptj2=cptj2+1
                 if cptj1==5 or cptj2==5:
                     popup()
