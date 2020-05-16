@@ -20,16 +20,19 @@ def dessiner():
                 print(etat[x][y])
                 if etat[x][y]==rond :
                     canvas.create_oval(x*cote, y*cote, (x+1)*cote, (y+1)*cote,outline = 'black', fill='red')
-                if etat[x][y]==croix:
+                if etat[x][y]==rond2:
                     canvas.create_oval(x*cote, y*cote, (x+1)*cote, (y+1)*cote,outline = 'black', fill='blue')
-                if etat[x][y] == neutre:
-                    canvas.delete(canvas.create_oval(x*cote, y*cote, (x+1)*cote, (y+1)*cote,outline = 'black'))
+                if etat[x][y]==neutre:
+                    canvas.create_rectangle((x * cote, y * cote, (x + 1) * cote, (y + 1) * cote), outline="black", fill="#D2B48C")
         global joueur
         if joueur == 1:
             joueur = 2
         else :
             joueur = 1
-        print("c'est le tour de joeur ",joueur)
+        print("c'est le tour de joueur ",joueur)
+        gagner()
+
+
                     
 
 
@@ -45,17 +48,20 @@ def clic(event):
     else :
         coord2x=(event.x)//75
         coord2y=(event.y)//75
-        test()
+        verif2()
     
 
 def verif():
     check=False
     if coordx==0:
-        check=True
+        if etat[coordx][coordy] == joueur or etat[coordx][coordy] == neutre:
+            check=True
     if coordx==4:
-        check=True
+        if etat[coordx][coordy] == joueur or etat[coordx][coordy] == neutre:
+            check=True
     if (coordx==1 or coordx==2 or coordx==3) and (coordy==0 or coordy==4):
-        check=True
+        if etat[coordx][coordy] == joueur or etat[coordx][coordy] == neutre:
+            check=True
     if check==True:
         global compt
         compt=1
@@ -63,9 +69,9 @@ def verif():
         if joueur == 1:
             etat[coordx][coordy]=rond
         if joueur == 2 :
-            etat[coordx][coordy]=croix
+            etat[coordx][coordy]=rond2
 
-def test():
+def verif2():
     check2=False
     if coordx==0:
         if coordy==0:
@@ -82,7 +88,7 @@ def test():
             if (coord2x==0 and coord2y==0) or (coord2x==4 and coord2y==0) or (coord2x==coordx and coord2y==4):
                 check2=True
         if coordy==4:
-            if (coord2x==0 and coord2y==0) or (coord2x==4 and coord2y==4) or (coord2x==coordx and coord2y==0):
+            if (coord2x==0 and coord2y==4) or (coord2x==4 and coord2y==4) or (coord2x==coordx and coord2y==0):
                 check2=True
     if coordx==4:
         if coordy==0:
@@ -150,6 +156,46 @@ def mvt():
     dessiner()
     global compt
     compt=0
+
+def gagner():
+    cptj1=0
+    cptj2=0
+    partie=False
+    for y in range(taille):
+        cptj1=0
+        cptj2=0
+        for x in range(taille):
+            if etat[x][y]==rond:
+                cptj1=cptj1+1
+            if etat[x][y]==croix:
+                cptj2=cptj2+1
+                if cptj1 == 5 or cptj2 == 5:
+                    popup()
+    for x in range(taille):
+        cptj1=0
+        cptj2=0
+        for y in range(taille):
+            if etat[x][y]==rond:
+                cptj1=cptj1+1
+            if etat[x][y]==croix:
+                cptj2=cptj2+1
+                if cptj1==5 or cptj2==5:
+                    popup()
+    if (etat[0][0] == etat[1][1] == etat[2][2] == etat[3][3] == etat[4][4]) and etat[0][0]!=neutre:
+        partie=True
+    if (etat[4][0] == etat[3][1] == etat[2][2] == etat[1][3] == etat[0][4]) and etat[4][0]!=neutre:
+        partie=True
+        if partie==True:
+            popup()
+
+def popup():
+    fen1 = Tk()
+    tex1 = Label(fen1, text='Vous avez gagné !', fg='red')
+    tex1.pack()
+    bou1 = Button(fen1, text='Quitter', command=fen1.destroy)
+    bou1.pack()
+    fen1.mainloop()
+
     
     
 
@@ -157,8 +203,7 @@ taille=5
 cote = 75  #côté d'une cellule
 neutre = 0   #piece neutre
 rond=1
-croix=2
-vide=3
+rond2=2
 
 
 
@@ -185,3 +230,4 @@ b1 = Button(fenetre, text ='restart', command =init)
 b1.pack(side =LEFT, padx =3, pady =3)
 
 fenetre.mainloop()
+
