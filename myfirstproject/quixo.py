@@ -21,9 +21,9 @@ def dessiner():
         for x in range(taille):
             print(etat[x][y])
             if etat[x][y] == rond:
-                canvas.create_oval(x * cote, y * cote, (x + 1) * cote, (y + 1) * cote, outline='black')
+                canvas.create_oval(x * cote, y * cote, (x + 1) * cote, (y + 1) * cote, outline='black', fill='red')
             if etat[x][y] == croix:
-                canvas.create_line(coordx, coordy, coordx + 1, coordy + 1, fill='black')
+                canvas.create_oval(x * cote, y * cote, (x + 1) * cote, (y + 1) * cote, outline='black', fill='blue')
             if etat[x][y] == neutre:
                 canvas.delete(canvas.create_oval(x * cote, y * cote, (x + 1) * cote, (y + 1) * cote, outline='black'))
     global joueur
