@@ -167,25 +167,33 @@ def gagner():
     cptj1 = 0
     cptj2 = 0
     partie = False
-    for y in range(taille):
-        cptj1 = 0
-        cptj2 = 0
+        for y in range(taille):
+        cptj1=0
         for x in range(taille):
-            if etat[x][y] == rond:
-                cptj1 = cptj1 + 1
-            if etat[x][y] == rond2:
-                cptj2 = cptj2 + 1
-                if cptj1 == 5 or cptj2 == 5:
+            if etat[x][y]==rond:
+                cptj1=cptj1+1
+                if cptj1 == 5:
+                    popup()
+    for y in range(taille):
+        cptj2=0
+        for x in range(taille):
+            if etat[x][y]==rond2:
+                cptj2=cptj2+1
+                if cptj2 == 5:
                     popup()
     for x in range(taille):
-        cptj1 = 0
-        cptj2 = 0
+        cptj1=0
         for y in range(taille):
-            if etat[x][y] == rond:
-                cptj1 = cptj1 + 1
-            if etat[x][y] == rond2:
-                cptj2 = cptj2 + 1
-                if cptj1 == 5 or cptj2 == 5:
+            if etat[x][y]==rond:
+                cptj1=cptj1+1
+                if cptj1==5:
+                    popup()
+    for x in range(taille):
+        cptj2=0
+        for y in range(taille):
+            if etat[x][y]==rond2:
+                cptj2=cptj2+1
+                if cptj2==5:
                     popup()
     if (etat[0][0] == etat[1][1] == etat[2][2] == etat[3][3] == etat[4][4]) and etat[0][0] != neutre:
         partie = True
