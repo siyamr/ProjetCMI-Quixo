@@ -23,7 +23,7 @@ def dessiner():
                 if etat[x][y]==croix:
                     canvas.create_oval(x*cote, y*cote, (x+1)*cote, (y+1)*cote,outline = 'black', fill='blue')
                 if etat[x][y] == neutre:
-                    canvas.delete(canvas.create_oval(x*cote, y*cote, (x+1)*cote, (y+1)*cote,outline = 'black'))
+                    canvas.delete(canvas.create_oval(x*cote, y*cote, (x+1)*cote, (y+1)*cote,outline = 'black')
         global joueur
         if joueur == 1:
             joueur = 2
