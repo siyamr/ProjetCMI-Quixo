@@ -229,14 +229,14 @@ fenetre.title("Quixo")
 # Titre dans la fenêtre
 texte1 = Label(fenetre, text="Quixo", font=("Comic Sans MS", 20, "italic"))
 texte1.pack()
-canvas = Canvas(fenetre, width=900, height=600)
+canvas = Canvas(fenetre, width=375, height=400)
 canvas.pack()
 canvas.bind("<Button>", clic)
 
 # fonctions pour le jeu
 init()
 dessiner()
-b1 = Button(fenetre, text='restart', command=init)
-b1.pack(side=LEFT, padx=3, pady=3)
+b1 = Button(fenetre, text='Restart', command=init)
+b1.pack(side=TOP, padx=3, pady=3)
 
 fenetre.mainloop()
