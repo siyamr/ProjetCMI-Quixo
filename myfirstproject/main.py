@@ -30,7 +30,7 @@ _init_()
 #Music and Audio
 pygame.mixer_music.load('cmi.mp3')
 pygame.mixer_music.play(-1)
-pygame.mixer_music.set_volume(0.1)
+pygame.mixer_music.set_volume(0.3)
 son_click = pygame.mixer.Sound("bouton_son.wav")
 rules_quixo = pygame.image.load('regles.png')
 
@@ -72,6 +72,7 @@ def main_menu():
         button_play = pygame.Rect(300, 250, 200, 50)
         button_rules = pygame.Rect(300, 350, 200, 50)
         button_credits = pygame.Rect(300, 450, 200, 50)
+        button_quit = pygame.Rect(550, 450, 50, 50)
 
         #Interaction souris/bouton, rend le bouton plus clair quand la souris passe dessus.
         #Vers Jouer
@@ -101,12 +102,19 @@ def main_menu():
                 click = False
         else:
             pygame.draw.rect(screen, darker, button_credits)
+        #Quitter
+        if button_quit.collidepoint((mouse_x, mouse_y)):
+            pygame.draw.rect(screen, grey, button_quit)
+            if click:
+                pygame.quit()
+        else:
+            pygame.draw.rect(screen, darker, button_quit)
 
         #Texte dans les boutons
         text_button('Jouer', black, 300, 250, 200, 50)
         text_button('Règles', black, 300, 350, 200, 50)
         text_button('Crédits', black, 300, 450, 200, 50)
-
+        text_button('x', black, 550, 450, 50, 50)
 
         #Event sections
         for event in pygame.event.get():
