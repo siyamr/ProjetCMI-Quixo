@@ -167,7 +167,7 @@ def gagner():
     cptj1 = 0
     cptj2 = 0
     partie = False
-        for y in range(taille):
+    for y in range(taille):
         cptj1=0
         for x in range(taille):
             if etat[x][y]==rond:
