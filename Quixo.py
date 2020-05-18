@@ -36,7 +36,7 @@ def dessiner(): # Dessine les cases de chaque joueur après chaque coups et chan
     gagner()
 
 
-def clic(event): #Récupère les coordonnées de la case sélectionnée 
+def clic(event): #Récupère les coordonnées de la case sélectionnée
     print("compt=", compt)
     global coordx, coord2x
     global coordy, coord2y
@@ -111,7 +111,7 @@ def verif2(): #Vérifie que le joueur peut bien déplacer son cube à la coordon
         print("Vous ne pouvez pas jouer ici")
 
 
-def mvt(): #Permet de déplacer les valeurs des cases à la case suivante 
+def mvt(): #Permet de déplacer les valeurs des cases à la case suivante
     var = etat[coordx][coordy]
     if coord2x == coordx:
         y = coord2y
@@ -163,7 +163,7 @@ def mvt(): #Permet de déplacer les valeurs des cases à la case suivante
     compt = 0
 
 
-def gagner():#Vérifie à chaque fin de tour si quelqu'un a gagné 
+def gagner():#Vérifie à chaque fin de tour si quelqu'un a gagné
     cptj1 = 0
     cptj2 = 0
     partie = False
@@ -203,7 +203,7 @@ def gagner():#Vérifie à chaque fin de tour si quelqu'un a gagné
             popup()
 
 
-def popup():#Crée un popup quand une personne a gagné 
+def popup():#Crée un popup quand une personne a gagné
     fen1 = Tk()
     tex1 = Label(fen1, text='Vous avez gagné !', fg='red')
     tex1.pack()
@@ -238,8 +238,7 @@ canvas.bind("<Button>", clic)
 # fonctions pour le jeu
 init()
 dessiner()
-b1 = Button(fenetre, text='restart', command=init)
-b1.pack(side=LEFT, padx=3, pady=3)
+b1 = Button(fenetre, text='Restart', command=init)
+b1.pack(side=TOP, padx=3, pady=3)
 
 fenetre.mainloop()
-
