@@ -72,7 +72,7 @@ def verif(): #Vérifie que la case sélectionnée est bien jouable selon les rè
             etat[coordx][coordy] = rond2
 
 
-def verif2(): #Vérifie que le joueur peut bien déplacer son cube aux coordonnées voulue
+def verif2(): #Vérifie que le joueur peut bien déplacer son cube à la coordonnée voulue
     check2 = False
     if coordx == 0:
         if coordy == 0:
@@ -111,7 +111,7 @@ def verif2(): #Vérifie que le joueur peut bien déplacer son cube aux coordonn�
         print("Vous ne pouvez pas jouer ici")
 
 
-def mvt(): #Permet des déplacer les valeurs des cases à la case suivantes 
+def mvt(): #Permet de déplacer les valeurs des cases à la case suivante 
     var = etat[coordx][coordy]
     if coord2x == coordx:
         y = coord2y
@@ -214,13 +214,13 @@ def popup():#Crée un popup quand une personne a gagné
 
 taille = 5
 cote = 75  # côté d'une cellule
-neutre = 0  # piece neutre
+neutre = 0  # pièce neutre
 rond = 1
 rond2 = 2
 
 # Matrices
 cell = [[0 for i in range(taille)] for j in range(taille)]  # mémorise les cases
-etat = [[neutre for i in range(taille)] for j in range(taille)]  # mémorise les statuts des cases)
+etat = [[neutre for i in range(taille)] for j in range(taille)]  # mémorise les statuts des cases
 
 # Lancement du programme
 fenetre = Tk()
