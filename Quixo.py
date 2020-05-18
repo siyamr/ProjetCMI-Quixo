@@ -2,7 +2,7 @@ from tkinter import *
 from random import randrange
 
 
-# Données initiales (création d'une matrice)
+# Données initiales (création d'une matrice ainsi que la variable joueur qui va gérer le tour par tour)
 def init():
     global compt
     compt = 0
@@ -16,7 +16,7 @@ def init():
             print(etat[x][y])
 
 
-def dessiner():
+def dessiner(): # Dessine les cases de chaque joueur après chaque coups et change de tour
     for y in range(taille):
         for x in range(taille):
             print(etat[x][y])
@@ -36,7 +36,7 @@ def dessiner():
     gagner()
 
 
-def clic(event):
+def clic(event): #Récupère les coordonnées de la case sélectionnée 
     print("compt=", compt)
     global coordx, coord2x
     global coordy, coord2y
@@ -51,7 +51,7 @@ def clic(event):
         verif2()
 
 
-def verif():
+def verif(): #Vérifie que la case sélectionnée est bien jouable selon les règles
     check = False
     if coordx == 0:
         if etat[coordx][coordy] == joueur or etat[coordx][coordy] == neutre:
@@ -72,7 +72,7 @@ def verif():
             etat[coordx][coordy] = rond2
 
 
-def verif2():
+def verif2(): #Vérifie que le joueur peut bien déplacer son cube aux coordonnées voulue
     check2 = False
     if coordx == 0:
         if coordy == 0:
@@ -111,7 +111,7 @@ def verif2():
         print("Vous ne pouvez pas jouer ici")
 
 
-def mvt():
+def mvt(): #Permet des déplacer les valeurs des cases à la case suivantes 
     var = etat[coordx][coordy]
     if coord2x == coordx:
         y = coord2y
@@ -163,7 +163,7 @@ def mvt():
     compt = 0
 
 
-def gagner():
+def gagner():#Vérifie à chaque fin de tour si quelqu'un a gagné 
     cptj1 = 0
     cptj2 = 0
     partie = False
@@ -203,7 +203,7 @@ def gagner():
             popup()
 
 
-def popup():
+def popup():#Crée un popup quand une personne a gagné 
     fen1 = Tk()
     tex1 = Label(fen1, text='Vous avez gagné !', fg='red')
     tex1.pack()
