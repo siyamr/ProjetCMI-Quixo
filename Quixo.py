@@ -207,8 +207,10 @@ def popup():#Crée un popup quand une personne a gagné
     fen1 = Tk()
     tex1 = Label(fen1, text='Vous avez gagné !', fg='red')
     tex1.pack()
-    bou1 = Button(fen1, text='Quitter', command=fen1.destroy)
+    bou1 = Button(fen1, text='Quitter le jeu', command=lambda:[fen1.destroy(),fenetre.destroy()])
     bou1.pack()
+    bou2 = Button(fen1, text='Rejouer', command=lambda:[init(),fen1.destroy()])
+    bou2.pack()
     fen1.mainloop()
 
 
