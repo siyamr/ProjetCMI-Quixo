@@ -1,8 +1,17 @@
 # Projet CMI : Quixo
-Projet CMI
+- Jeu réalisé par Sofian E., Clara L., Adam S. et Siyam R.
+- Bande son composée par Adam S.
+---
+# Installer et Lancer le jeu :
+- Nécessite Python 3.X (dernière version préférable)
+- Installer pygame sur Windows : sur le terminal Windows, entrez la commande *python -m pip install pygame*
+- Lancer le jeu avec le fichier *main.py*
+---
+# Comment y jouer ?
+- Le jeu : [Link](https://www.youtube.com/watch?v=qHnYcWv2whw) (gameplay)
+- 
 
-Le jeu : https://www.youtube.com/watch?v=qHnYcWv2whw (gameplay)
-
+---
 - Interface Graphique (Siyam) (3h)
 - Menu (Jouer + Règles + Crédits + Quitter) (Siyam) (5h)
 - JoueurA/JoueurB/IA Clara (6h)
@@ -14,15 +23,3 @@ Le jeu : https://www.youtube.com/watch?v=qHnYcWv2whw (gameplay)
 
 - (Rajouter un chrono) Adam (2h)
 - (Rajouter du son) Adam (2h)
-
-Planning / Cahier des charges :
-
-28 Février : Gestion du Projet/Cahier des charges
-6 Mars : Algorithmes
-13 Mars : Plateau + Cubes + Interface Graphique
-20 Mars : Menu + Mise en code du Jeu + Mouvements
-27 Mars : Mise en code du Jeu + Joueurs + Gestion du Tour 
-03 Avril : Mise en code du Jeu + Ajout du Son + Chrono 
-10 Avril : Débuggage + Vérification
-20 Avril : Date limite
-24  Avril : Soutenance Oral
