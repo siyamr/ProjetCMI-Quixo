@@ -10,16 +10,5 @@
 ## Comment y jouer ?
 - Le jeu : [Gameplay du Jeu](https://www.youtube.com/watch?v=qHnYcWv2whw)
 - But du jeu : *Réaliser un alignement de 5 cubes à l’horizontal, à la vertical ou en diagonal avec votre symbole.*
-
+- A tour de rôle, prenez un pion "blanc" et placez
 ---
-- Interface Graphique (Siyam) (3h)
-- Menu (Jouer + Règles + Crédits + Quitter) (Siyam) (5h)
-- JoueurA/JoueurB/IA Clara (6h)
-- Mise en code du Jeu (Applications des règles) Tout le monde (12h)
-- Plateau (5x5) Sofian (2h)
-- Cubes (Faces Neutre/Rond/Croix) Sofian (2h)
-- Gestion du Tour Clara (3h)
-- Mouvement (Ligne/Colonne/Direction) Adam (4h)
-
-- (Rajouter un chrono) Adam (2h)
-- (Rajouter du son) Adam (2h)
