@@ -10,5 +10,5 @@
 ## Comment y jouer ?
 - Le jeu : [Gameplay du Jeu](https://www.youtube.com/watch?v=qHnYcWv2whw)
 - But du jeu : *Réaliser un alignement de 5 cubes à l’horizontal, à la vertical ou en diagonal avec votre symbole.*
-- A tour de rôle, prenez un pion "blanc" et placez
+- A tour de rôle, prenez un pion "blanc" sur les extremités du plateau et placez le sur l'une des extrémités de l'emplacement du pion
 ---
