@@ -12,4 +12,5 @@
 - But du jeu : *Réaliser un alignement de 5 cubes à l’horizontal, à la vertical ou en diagonal avec votre symbole.*
 - A tour de rôle, prenez un pion "blanc" sur les extremités du plateau et placez-le sur l'une des extrémités du plateau.
 - La partie se termine lorsque l'un des joueurs réalise une ligne de 5 pions.
+- Voir vidéo "DescriptionQuixo.mp4" si besoin.
 ---
