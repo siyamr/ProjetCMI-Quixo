@@ -3,7 +3,7 @@
 - Bande son composée par Adam S.
 ---
 ## Installer et Lancer le jeu :
-- Nécessite Python 3.X (dernière version préférable)
+- Nécessite [Python 3.X](https://www.python.org/downloads/) (dernière version préférable)
 - Installer pygame sur Windows : sur le terminal Windows, entrez la commande *python -m pip install pygame*
 - Lancer le jeu avec le fichier *main.py*
 ---
